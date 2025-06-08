@@ -1,9 +1,10 @@
 import { Text, View } from 'react-native';
-
+import { NavBar } from '@/src/components/NavBar/NavBar';
 export default function Index() {
     return (
         <View>
-            <Text>Welcome to the Index Page</Text>
+            <NavBar />
+
         </View>
     )
 }
