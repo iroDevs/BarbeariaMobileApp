@@ -2,13 +2,11 @@ import { View, StyleSheet,Image, Text, StatusBar, Touchable, TouchableOpacity } 
 import { MaterialIcons } from '@expo/vector-icons';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
 
     header: {
         height: 60,
         backgroundColor: '#141414',
+        //backgroundColor: 'red',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 20,
@@ -23,7 +21,7 @@ const styles = StyleSheet.create({
 })
 
 
-export function NavBar(){
+export function NavBar({openMenu}: { openMenu: () => void }) {
     return (
         <>
          <StatusBar
@@ -31,7 +29,7 @@ export function NavBar(){
         backgroundColor="#1e1e1e" // fundo escuro da barra
       />
 
-            <View style={styles.container}>
+
                 <View style={styles.header}>
                     <Image
                         source={require('../../assets/Logo.jpg')}
@@ -39,11 +37,11 @@ export function NavBar(){
 
                     />
                     <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Barbearia App</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={openMenu}>
                         <MaterialIcons name="menu" size={24} color="white" />
                     </TouchableOpacity>
                 </View>
-            </View>
+
         </>
     )
 }
