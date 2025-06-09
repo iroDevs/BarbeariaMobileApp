@@ -1,4 +1,4 @@
-import { View, StyleSheet,Image, Text, StatusBar } from "react-native";
+import { View, StyleSheet,Image, Text, StatusBar, Touchable, TouchableOpacity } from "react-native";
 import { MaterialIcons } from '@expo/vector-icons';
 
 const styles = StyleSheet.create({
@@ -39,7 +39,9 @@ export function NavBar(){
 
                     />
                     <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>Barbearia App</Text>
-                    <MaterialIcons name="menu" size={24} color="white" />
+                    <TouchableOpacity>
+                        <MaterialIcons name="menu" size={24} color="white" />
+                    </TouchableOpacity>
                 </View>
             </View>
         </>
