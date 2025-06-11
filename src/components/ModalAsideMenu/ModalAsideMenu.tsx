@@ -1,5 +1,6 @@
 import { Image, StyleSheet } from "react-native";
 import { View, Text, Modal, TouchableOpacity } from "react-native";
+import { Link } from "../Link/Link";
 
 type PropsModalAsideMenu = {
     open: boolean;
@@ -38,6 +39,10 @@ export function ModalAsideMenu({ open, onClose }: PropsModalAsideMenu) {
 
                     <View style={styles.modalContent}>
                         <Text style={{ color: '#fff' }}>Menu Content</Text>
+                        <Link
+                            to="/login"
+                            text="Home"
+                        />
                     </View>
                 </TouchableOpacity>
             </TouchableOpacity>
