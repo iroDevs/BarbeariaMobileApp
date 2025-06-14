@@ -21,7 +21,8 @@
         "foregroundImage": "./assets/images/icon.jpg",
         "backgroundColor": "#000000"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.BarbeariaMobileApp"
     },
     "web": {
       "bundler": "metro",
